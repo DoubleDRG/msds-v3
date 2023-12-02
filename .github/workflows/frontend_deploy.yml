@@ -8,6 +8,8 @@ on:
 jobs:
   Build_And_Deploy_To_FrontCloud:
     runs-on: ubuntu-latest
+    env:
+      CI: false
     strategy:
       matrix:
         node-version: [18.x]
