@@ -15,10 +15,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+      - name: Install Yarn
+        run: npm install -g yarn
       - name: Install Dependencies
         run: |
           cd frontend
           cd reactweb
-          yarn
+          yarn install
       - name: Build
         run: yarn build
