@@ -8,11 +8,14 @@ on:
 jobs:
   Build_And_Deploy_To_FrontCloud:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x]
     steps:
       - name: Download Code From Github
         uses: actions/checkout@v4
-      - name: Install Node-18
-        uses: actions/setup-node@v4
+        #   - name: Install Node-18
+        #     uses: actions/setup-node@v4
         with:
           node-version: 18
       - name: Install Yarn
