@@ -7,9 +7,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://${RDS_HOSTNAME}:${RDS_PORT}/${RDS_DB_NAME}
-    username: ${RDS_USERNAME}
-    password: ${RDS_PASSWORD}
+    url: jdbc:mysql://msds-mysql-v3.chhnvavqljlp.ap-northeast-2.rds.amazonaws.com:3306/msds
+    username: dyl0115
+    password: endyd132!!
 #
 
   jpa:
