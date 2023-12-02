@@ -11,7 +11,7 @@ public class HomeController
 {
     private final UserPrincipal userPrincipal;
 
-    @GetMapping({"/home"})
+    @GetMapping({"/"})
     public String home()
     {
         Long id = userPrincipal.getId();
