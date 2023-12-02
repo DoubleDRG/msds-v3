@@ -1,5 +1,5 @@
 name: msds-v3
-run-name: ${{github.actor}} is deploy Backend Projects with Github Actions.
+run-name: ${{github.actor}} is deploy Backend with Github Actions.
 on:
   push:
     branches:
@@ -21,7 +21,7 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean build
 
-      - name: Get Current-Time
+      - name: Set Current-Time With Asia/Seoul
         uses: 1466587594/get-current-time@v2
         id: current-time
         with:
@@ -30,15 +30,15 @@ jobs:
       - name: Show Current-Time
         run: echo "CurrentTime=${{steps.current-time.outputs.formattedTime}}"
 
-#      - name: Generate deploy.zip
-#        run:
-#          mkdir deploy
-#          cp build/libs/*.jar deploy/application.jar
-#          cp Procfile deploy/Procfile
-#          cp -r .ebextensions deploy/.ebextensions
-#          cd deploy
-#          zip -r deploy.zip .
-#
+      - name: Generate deploy.zip
+        run: | 
+          mkdir deploy
+          cp build/libs/*.jar deploy/application.jar
+          cp Procfile deploy/Procfile
+          cp -r .ebextensions deploy/.ebextensions
+          cd deploy
+          zip -r deploy.zip .
+
 #      - name: Deploy To EB
 #        uses: einaregilsson/beanstalk-deploy@v21
 #        with:
@@ -49,7 +49,3 @@ jobs:
 #          version_label: msds-v3-${{steps.current-time.outputs.formattedTime}}
 #          region: ap-northeast-2
 #          deployment_package: deploy/deploy.zip
-
-
-
-
