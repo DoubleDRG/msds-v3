@@ -26,7 +26,7 @@ msds:
   back:
     home-uri: http://msds-capstone.store
   front:
-#    소셜 로그인 완료시 이 경로로 front 화면을 리다이렉트 시킴
+#    소셜 로그인 완료시 이 경로로 front 화면을 리다이렉트 시킴.
 #    home-uri: https://social-login-front.d2q2g823gv40cu.amplifyapp.com/
     home-uri: http://localhost:3000
   chatbot:
