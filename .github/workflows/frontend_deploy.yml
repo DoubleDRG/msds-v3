@@ -20,10 +20,9 @@ jobs:
           node-version: 18
       - name: Install Yarn
         run: npm install -g yarn
-      - name: Install Dependencies
+      - name: Install Dependencies And Build
         run: |
           cd frontend
           cd reactweb
-          yarn install
-      - name: Build
-        run: yarn build
+          yarn
+          yarn build
