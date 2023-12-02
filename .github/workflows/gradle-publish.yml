@@ -39,7 +39,7 @@ jobs:
           cd deploy
           zip -r deploy.zip .
 
-      - name: Deploy To EB
+      - name: Deploy To ElasticBeanstalk
         uses: einaregilsson/beanstalk-deploy@v21
         with:
           aws_access_key: ${{secrets.AWS_ACCESS_KEY}}
