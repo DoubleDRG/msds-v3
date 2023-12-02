@@ -10,7 +10,7 @@ spring:
     url: jdbc:mysql://msds-mysql-v3.chhnvavqljlp.ap-northeast-2.rds.amazonaws.com:3306/msds
     username: dyl0115
     password: endyd132!!
-#
+
 
   jpa:
     open-in-view: true
