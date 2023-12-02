@@ -39,13 +39,13 @@ jobs:
           cd deploy
           zip -r deploy.zip .
 
-#      - name: Deploy To EB
-#        uses: einaregilsson/beanstalk-deploy@v21
-#        with:
-#          aws_access_key: ${{secrets.AWS_ACCESS_KEY}}
-#          aws_secret_key: ${{secrets.AWS_SECRET_KEY}}
-#          application_name: msds-v3
-#          environment_name: Msds-v3-env
-#          version_label: msds-v3-${{steps.current-time.outputs.formattedTime}}
-#          region: ap-northeast-2
-#          deployment_package: deploy/deploy.zip
+      - name: Deploy To EB
+        uses: einaregilsson/beanstalk-deploy@v21
+        with:
+          aws_access_key: ${{secrets.AWS_ACCESS_KEY}}
+          aws_secret_key: ${{secrets.AWS_SECRET_KEY}}
+          application_name: msds-v3
+          environment_name: Msds-v3-env
+          version_label: msds-v3-backend-${{steps.current-time.outputs.formattedTime}}
+          region: ap-northeast-2
+          deployment_package: deploy/deploy.zip
